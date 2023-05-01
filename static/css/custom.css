@@ -105,3 +105,25 @@ homeBG {
 .custom-table-bordered td {
   border: 1px solid #000000; /* Black border */
 }
+
+.header {
+  background-image: url('{% static "images/tutor_1.jpg" %}');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-blend-mode: multiply;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin-bottom: 40px; /* Add vertical space between header and the rest of the page */
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+}

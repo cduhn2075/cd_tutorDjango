@@ -44,7 +44,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h_xkv%-g85^4#l(8liyom$*j#-4tpsdu+-rf@o3te^#zaqogsp'
+SECRET_KEY = config('secret_key')
+
+STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY_TEST')
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY_TEST')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -183,6 +186,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGIN_URL = "/login/"
+LOGOUT_REDIRECT_URL = "/"
 
 
 # Internationalization

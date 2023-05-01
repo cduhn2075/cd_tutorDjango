@@ -2,11 +2,9 @@
 # Third party imports
 from django.shortcuts import render, redirect
 from .forms import NewUserForm
-from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
-from django.http import  HttpResponseRedirect
 
 
 def register_request(request):
@@ -47,4 +45,4 @@ def login_request(request):
 
 def logout_view(request):
     logout(request)
-    return redirect("/")
+    return redirect("/login/")
